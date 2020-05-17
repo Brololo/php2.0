@@ -11,13 +11,15 @@ if($_POST['reponse']=="OUI"){
 
     $query = $pdo->prepare("UPDATE postulat SET Accepter = 'OUI' WHERE PostulatID = :PostulatID");
     $query->execute(array('PostulatID' => $PostulatID));
-    echo "Candidature accepté";
+    header('Location: home.php');
+
 
 } else {
 
     $query = $pdo->prepare("UPDATE postulat SET Accepter = 'NON' WHERE PostulatID = :PostulatID");
     $query->execute(array('PostulatID' => $PostulatID));
-    echo "Candidature refusé";
+    header('Location: home.php');
+
 
 }
 

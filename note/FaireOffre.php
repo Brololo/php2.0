@@ -13,8 +13,6 @@ session_start();
     </head>
     <body>
 
-
-
 <?php
 
 require('PDO.php');
